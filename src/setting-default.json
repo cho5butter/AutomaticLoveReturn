@@ -1,0 +1,29 @@
+{
+    "version": "1.0.0",
+    "twitterApp": {
+        "consumerKey": "",
+        "consumerSecret": "",
+        "accessToken": "",
+        "accessTokenSecret": ""
+    },
+    "setting": {
+        "Name": "",
+        "Day": "",
+        "numberOfTweets": "",
+        "listID": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "blackList": {
+        "blackArray": [
+            "@null",
+            "@hoge"
+        ]
+    },
+    "mailSetting": {
+        "isSent": "true",
+        "address": ""
+    }
+}

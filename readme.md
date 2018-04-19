@@ -59,3 +59,10 @@ true （送信する）か false（送信しない）のどちらかを入力し
 
 * address
 結果を送信するメールアドレスを入力してください
+
+## サポート
+
+twitter
+[https://twitter.com/__cho__]
+メールフォーム
+[https://c5bt.net/contact]

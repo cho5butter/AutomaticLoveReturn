@@ -27,7 +27,7 @@ AutomaticLoveReturnは特定のリストを自動遡りするツールです
 
 * Name
 自分のユーザー名を書きます＠はあってもなくても構いません
-記入例) @__cho__
+記入例) @\_\_cho\_\_
 
 * Day
 リストのツイートを最大何日遡るかを設定します
@@ -63,6 +63,6 @@ true （送信する）か false（送信しない）のどちらかを入力し
 ## サポート
 
 twitter
-[https://twitter.com/__cho__]
+<https://twitter.com/\_\_cho\_\_>
 メールフォーム
-[https://c5bt.net/contact]
+<https://c5bt.net/contact>

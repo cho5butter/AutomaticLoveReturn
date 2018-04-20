@@ -8,8 +8,8 @@
     },
     "setting": {
         "Name": "",
-        "Day": "",
-        "numberOfTweets": "",
+        "Day": 1,
+        "numberOfTweets": 50,
         "listID": [
             "",
             "",

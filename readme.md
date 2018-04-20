@@ -63,6 +63,6 @@ true （送信する）か false（送信しない）のどちらかを入力し
 ## サポート
 
 twitter
-<https://twitter.com/\_\_cho\_\_>
+<https://twitter.com/__cho__>
 メールフォーム
 <https://c5bt.net/contact>

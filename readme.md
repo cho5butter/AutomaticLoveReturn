@@ -1,5 +1,8 @@
 # AutomaticLoveReturn
 
+[![Travis](https://img.shields.io/travis/USER/REPO.svg?style=flat-square)](https://travis-ci.org/cho5butter/AutomaticLoveReturn.svg?branch=master)
+
+
 ## 説明
 
 AutomaticLoveReturnは特定のリストを自動遡りするツールです

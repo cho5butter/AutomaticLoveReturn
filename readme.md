@@ -1,7 +1,9 @@
 # AutomaticLoveReturn
 
-[![Travis](https://img.shields.io/travis/USER/REPO.svg?style=flat-square)](https://travis-ci.org/cho5butter/AutomaticLoveReturn.svg?branch=master)
-
+[![Build Status](https://travis-ci.org/cho5butter/AutomaticLoveReturn.svg?branch=master)](https://travis-ci.org/cho5butter/AutomaticLoveReturn)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f0c0914087d81e0922d7/maintainability)](https://codeclimate.com/github/cho5butter/AutomaticLoveReturn/maintainability)
+[![Dependency Status](https://beta.gemnasium.com/badges/github.com/cho5butter/AutomaticLoveReturn.svg)](https://beta.gemnasium.com/projects/github.com/cho5butter/AutomaticLoveReturn)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 ## 説明
 

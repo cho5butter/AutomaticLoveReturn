@@ -1,15 +1,29 @@
+"""
+Created on 2018/04/22
+
+@author: ちょこばた
+"""
+
+
 # import
 import twitter
 import json
 import datetime
 from modules import function as fn
+from modules import object as cs
 
 #ツイート格納タプル
 tweetsList = []
 
+#カウンター
+counter = 0
+
 # json形式の設定ファイル読み込み
 settingFile = open('setting.json')
 settingData = json.load(settingFile)
+
+#ブラックリスト取得
+blackLists = settingData["blackList"]["blackArray"]
 
 # 設定値を読み込み
 CONSUMER_KEY = settingData["twitterApp"]["consumerKey"]
@@ -38,16 +52,37 @@ NUMBER_OF_TWEETS = settingData["setting"]["numberOfTweets"]
 #リスト取得
 listIds = settingData["setting"]["listID"]
 
+#ブラックリスト@削除処理
+for i in range(len(blackLists)):
+    blackLists[i] = blackLists[i].replace("@","")
+
 #ツイート取得
 for listId in listIds:
     tweets = fn.getTimeLine(listId, NUMBER_OF_TWEETS, t)
     for tweet in tweets:
         tmpDic = {
-            "data" : tweet['created_at'] ,
+            "date" : tweet['created_at'] ,
             "id" : tweet['id'] ,
             "tweet" : tweet['text'] ,
             "user" : tweet['user']['screen_name'] ,
             "source" : tweet['source']
         }
         tweetsList.append(tmpDic)
-print(tweetsList)
+
+#取得ツイート処理
+for tweetList in tweetsList:
+    tmpUser = tweetList["user"]
+    tmpTweetID = tweetList["id"]
+    tmpDate = datetime.datetime.strptime(tweetList["date"], '%a %b %d %H:%M:%S +0000 %Y')
+    print(tmpUser)
+    print(tmpTweetID)
+    print(tmpDate)
+    isIncludeBlackList = fn.isIncludeBlackList(blackLists, tmpUser)
+    if not isIncludeBlackList:
+        isExtendedTweetID = fn.isExtendedTweetID(tmpTweetID)
+        if not isExtendedTweetID:
+            if tmpDate > sinceTime:
+                if counter < NUMBER_OF_TWEETS:
+                    counter+=1
+                    print(counter)
+                    t.favorites.create(_id = tmpTweetID)

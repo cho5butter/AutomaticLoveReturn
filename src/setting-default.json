@@ -23,7 +23,9 @@
         ]
     },
     "mailSetting": {
-        "isSent": "true",
-        "address": ""
+        "sentAddress": "",
+        "fromAddress": "",
+        "subject": "自動遡り実行結果",
+        "password" : ""
     }
 }

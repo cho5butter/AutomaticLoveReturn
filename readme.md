@@ -2,9 +2,10 @@
 
 [![Build Status](https://travis-ci.org/cho5butter/AutomaticLoveReturn.svg?branch=master)](https://travis-ci.org/cho5butter/AutomaticLoveReturn)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f0c0914087d81e0922d7/maintainability)](https://codeclimate.com/github/cho5butter/AutomaticLoveReturn/maintainability)
-[![Dependency Status](https://beta.gemnasium.com/badges/github.com/cho5butter/AutomaticLoveReturn.svg)](https://beta.gemnasium.com/projects/github.com/cho5butter/AutomaticLoveReturn)
+[![Python](https://img.shields.io/badge/python-3.6.4-pink.svg?longCache=true&style=flat)]()
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![Progress](https://img.shields.io/badge/progress-completion-green.svg?longCache=true&style=flat)]()
+
 
 ## 説明
 
@@ -57,14 +58,25 @@ AutomaticLoveReturnは特定のリストを自動遡りするツールです
 記入例) @null
 
 ### mailSetting
-現在記入途中
 * isSent
 プログラムが実行されたときに実行結果のメールを送るかどうかの設定です
 true （送信する）か false（送信しない）のどちらかを入力してください
 記入例）false
 
-* address
+* sentAddress
 結果を送信するメールアドレスを入力してください
+記入例) test@null.com
+
+* fromAddress
+送信元のメールアドレスを入力してください（Gmailのみ可能）
+記入例) exsample@gmail.com
+
+* subject
+メールの題名を記入してください
+
+* password
+Gmailのアプリパスワードを記入してください
+詳細はこちら：<https://support.google.com/accounts/answer/185833?hl=ja&ctx=ch_b%2F0%2FDisplayUnlockCaptcha>
 
 ## サポート
 

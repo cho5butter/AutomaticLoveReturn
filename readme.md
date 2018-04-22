@@ -57,7 +57,7 @@ AutomaticLoveReturnは特定のリストを自動遡りするツールです
 記入例) @null
 
 ### mailSetting
-
+現在記入途中
 * isSent
 プログラムが実行されたときに実行結果のメールを送るかどうかの設定です
 true （送信する）か false（送信しない）のどちらかを入力してください

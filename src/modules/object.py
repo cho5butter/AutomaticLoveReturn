@@ -14,8 +14,9 @@ class Mail:
         self.password = setting["mailSetting"]["password"]
         self.counter = counter
     def sentMail(self):
-        self.msg = self.createMessage(self.fromAddress, self.toAddress, self.subject, self.counter)
-        self.send(self.fromAddress, self.toAddress, self.msg, self.password)
+        if self.isSent == "true":
+            self.msg = self.createMessage(self.fromAddress, self.toAddress, self.subject, self.counter)
+            self.send(self.fromAddress, self.toAddress, self.msg, self.password)
     def createMessage(self, fromAddress, toAddress, subject, counter):
         msg = MIMEText(str(counter)+"件のツイートの遡りに成功しました")
         msg['Subject'] = subject

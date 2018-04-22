@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/f0c0914087d81e0922d7/maintainability)](https://codeclimate.com/github/cho5butter/AutomaticLoveReturn/maintainability)
 [![Dependency Status](https://beta.gemnasium.com/badges/github.com/cho5butter/AutomaticLoveReturn.svg)](https://beta.gemnasium.com/projects/github.com/cho5butter/AutomaticLoveReturn)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
-[![Progress](https://img.shields.io/badge/progress-development-orange.svg?longCache=true&style=flat)]()
+[![Progress](https://img.shields.io/badge/progress-completion-green.svg?longCache=true&style=flat)]()
 
 ## 説明
 

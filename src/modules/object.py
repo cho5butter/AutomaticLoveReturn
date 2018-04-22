@@ -14,16 +14,16 @@ class Mail:
         self.password = setting["mailSetting"]["password"]
         self.counter = counter
     def sentMail(self):
-        self.msg = self.createMassage(self.fromAddress, self.toAddress, self.subject, self.counter)
+        self.msg = self.createMessage(self.fromAddress, self.toAddress, self.subject, self.counter)
         self.send(self.fromAddress, self.toAddress, self.msg, self.password)
     def createMessage(self, fromAddress, toAddress, subject, counter):
-        msg = MIMEText(counter+"件のツイートの遡りに成功しました")
+        msg = MIMEText(str(counter)+"件のツイートの遡りに成功しました")
         msg['Subject'] = subject
         msg['From'] = fromAddress
         msg['To'] = toAddress
         msg['Date'] = formatdate()
         return msg
-    def send(fromAddress, toAddress, msg, password):
+    def send(self, fromAddress, toAddress, msg, password):
         smtpobj = smtplib.SMTP('smtp.gmail.com', 587)
         smtpobj.ehlo()
         smtpobj.starttls()

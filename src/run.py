@@ -83,6 +83,13 @@ for tweetList in tweetsList:
         if not isExtendedTweetID:
             if tmpDate > sinceTime:
                 if counter < NUMBER_OF_TWEETS:
+                    try:
+                        t.favorites.create(_id = tmpTweetID)
+                    except:
+                        print("既にお気に入りに登録されている可能性があります")
                     counter+=1
                     print(counter)
-                    t.favorites.create(_id = tmpTweetID)
+
+#メール送信
+mail = cs.Mail(settingData, counter)
+mail.sentMail()

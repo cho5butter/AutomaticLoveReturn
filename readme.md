@@ -1,8 +1,8 @@
 # AutomaticLoveReturn
 
-[![Build Status](https://travis-ci.org/cho5butter/AutomaticLoveReturn.svg?branch=master)](https://travis-ci.org/cho5butter/AutomaticLoveReturn)
+[![Build](https://img.shields.io/badge/build-passing-green.svg?longCache=true&style=flat)]()
 [![Maintainability](https://api.codeclimate.com/v1/badges/f0c0914087d81e0922d7/maintainability)](https://codeclimate.com/github/cho5butter/AutomaticLoveReturn/maintainability)
-[![Python](https://img.shields.io/badge/python-3.6.4-pink.svg?longCache=true&style=flat)]()
+[![Python](https://img.shields.io/badge/python-3.6.4-orange.svg?longCache=true&style=flat)]()
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![Progress](https://img.shields.io/badge/progress-completion-green.svg?longCache=true&style=flat)]()
 

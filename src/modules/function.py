@@ -1,8 +1,9 @@
 tweetIds = []
 
 #ツイート取得
-def getTimeLine(listId, numberOfTweets, t):
-    return t.lists.statuses(list_id = listId, count = numberOfTweets)
+def getTimeLine(listId, numberOfTweets, t, incrts):
+
+    return t.lists.statuses(list_id = listId, count = numberOfTweets, include_rts = incrts)
 
 def isIncludeBlackList(blackLists, tmpUser):
     isIncludeBlackList = tmpUser in blackLists

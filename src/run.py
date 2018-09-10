@@ -11,6 +11,8 @@ import json
 import datetime
 from modules import function as fn
 from modules import object as cs
+import os
+
 
 #ツイート格納タプル
 tweetsList = []
@@ -26,10 +28,10 @@ settingData = json.load(settingFile)
 blackLists = settingData["blackList"]["blackArray"]
 
 # 設定値を読み込み
-CONSUMER_KEY = settingData["twitterApp"]["consumerKey"]
-CONSUMER_SECRET = settingData["twitterApp"]["consumerSecret"]
-ACCESS_TOKEN = settingData["twitterApp"]["accessToken"]
-ACCESS_TOKEN_SECRET = settingData["twitterApp"]["accessTokenSecret"]
+CONSUMER_KEY = os.environ['TWITTER_CK']
+CONSUMER_SECRET = os.environ['TWITTER_CS']
+ACCESS_TOKEN = os.environ['TWITTER_AT']
+ACCESS_TOKEN_SECRET = os.environ['TWITTER_ATS']
 
 # インスタンスを生成
 auth = twitter.OAuth(consumer_key = CONSUMER_KEY ,
@@ -52,13 +54,16 @@ NUMBER_OF_TWEETS = settingData["setting"]["numberOfTweets"]
 #リスト取得
 listIds = settingData["setting"]["listID"]
 
+#リツイートを含めるかどうか
+INCLUDE_RETWEET = settingData["setting"]["incrts"]
+
 #ブラックリスト@削除処理
 for i in range(len(blackLists)):
     blackLists[i] = blackLists[i].replace("@","")
 
 #ツイート取得
 for listId in listIds:
-    tweets = fn.getTimeLine(listId, NUMBER_OF_TWEETS, t)
+    tweets = fn.getTimeLine(listId, NUMBER_OF_TWEETS, t, INCLUDE_RETWEET)
     for tweet in tweets:
         tmpDic = {
             "date" : tweet['created_at'] ,

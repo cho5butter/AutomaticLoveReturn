@@ -1,6 +1,7 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.utils import formatdate
+import os
 
 ##参照元 https://qiita.com/bgg0u/items/630a87ce1a44778bbeb1
 
@@ -8,10 +9,10 @@ from email.utils import formatdate
 class Mail:
     def __init__(self, setting, counter):
         self.isSent = setting["mailSetting"]["isSent"]
-        self.toAddress = setting["mailSetting"]["sentAddress"]
-        self.fromAddress = setting["mailSetting"]["fromAddress"]
+        self.toAddress = os.environ['TWITTER_ADDRESS']
+        self.fromAddress = os.environ['TWITTER_ADDRESS']
         self.subject = setting["mailSetting"]["subject"]
-        self.password = setting["mailSetting"]["password"]
+        self.password = os.environ['TWITTER_PASSWORD']
         self.counter = counter
     def sentMail(self):
         if self.isSent == "true":

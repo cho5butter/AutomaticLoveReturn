@@ -5,15 +5,15 @@
         "numberOfTweets": 200,
         "incrts" : false,
         "listID": [
-            "",
-            "",
-            ""
+            "964418240020541440",
+            "919950243612966912",
+            "208436917"
         ]
     },
     "blackList": {
         "blackArray": [
-            "",
-            ""
+            "@__cho__",
+            "@hoge"
         ]
     },
     "mailSetting": {
